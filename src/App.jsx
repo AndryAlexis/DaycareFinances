@@ -1,19 +1,20 @@
-import {createHashRouter, RouterProvider} from 'react-router-dom'
+import {
+  createBrowserRouter, 
+  RouterProvider
+} from 'react-router-dom'
 
 import Home from './routes/home'
 import Test from './routes/test'
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home/>
+    element: <Home/>,
   },
   {
     path: '/test',
-    element: <Test/>
+    element: <Test/>,
   }
 ])
 
-const App = () => <RouterProvider router={router}/>
-
-export default App
+export default _ => <RouterProvider router={router}/>
